@@ -112,6 +112,19 @@ p{margin:0}
 .btn-line:hover{border-color:var(--tinta);background:var(--tinta);color:var(--papel)}
 .btn-lg{min-height:62px;padding:0 40px}
 
+/* seletor de idioma */
+.lang-switch{display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:6px}
+.lang-switch button{min-width:40px;min-height:40px;padding:0 8px;border:0;background:transparent;color:rgba(239,228,208,.55);font:600 .78rem/1 var(--sans);letter-spacing:.12em;cursor:pointer;position:relative;transition:color .3s}
+.lang-switch button::after{content:"";position:absolute;left:12px;right:12px;bottom:8px;height:1px;background:var(--ouro);transform:scaleX(0);transition:transform .35s var(--ease)}
+.lang-switch button[aria-pressed="true"]{color:var(--creme)}
+.lang-switch button[aria-pressed="true"]::after{transform:scaleX(1)}
+.lang-switch button:hover{color:var(--creme)}
+.lang-switch button+button{border-left:1px solid rgba(239,228,208,.2)}
+@media (min-width:1024px){.lang-switch{margin-left:22px;margin-right:0}}
+.brand span{white-space:nowrap}
+@media (max-width:430px){.header .brand span{font-size:1.12rem}.header .brand img{width:38px;height:38px}.lang-switch button{min-width:34px;padding:0 6px}.lang-switch button::after{left:9px;right:9px}}
+@media (max-width:359px){.header .brand span{display:none}}
+
 /* ============ HEADER ============ */
 .header{position:fixed;inset:0 0 auto 0;z-index:100;padding-top:env(safe-area-inset-top,0px);transition:background .5s var(--ease),border-color .5s var(--ease);border-bottom:1px solid transparent}
 .header.is-solid{background:rgba(29,19,13,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:var(--linha-clara)}
@@ -387,7 +400,7 @@ p{margin:0}
 .hours-table th{font-family:var(--serif);font-size:1.25rem}
 .hours-table td{text-align:right;color:var(--tinta-suave);letter-spacing:.03em}
 .hours-table tr.today th,.hours-table tr.today td{color:var(--espresso);font-weight:700}
-.hours-table tr.today th::after{content:"hoje";margin-left:10px;font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.06em;padding:3px 9px;border-radius:2px;background:var(--espresso);color:var(--ouro-claro);vertical-align:middle}
+.hours-table tr.today th::after{content:attr(data-today);margin-left:10px;font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.06em;padding:3px 9px;border-radius:2px;background:var(--espresso);color:var(--ouro-claro);vertical-align:middle}
 @media (min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;align-items:start}.hours{grid-template-columns:.9fr 1.1fr}.map-wrap{aspect-ratio:auto;height:100%;min-height:480px}}
 
 /* ============ CTA FINAL ============ */
@@ -470,6 +483,10 @@ p{margin:0}
       </ul>
       <a class="btn btn-primary" data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">Ver cardápio</a>
     </nav>
+    <div class="lang-switch" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="pt" lang="pt-BR" aria-pressed="true">PT</button>
+      <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
+    </div>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -499,7 +516,7 @@ p{margin:0}
     <img class="hero-logo" src="assets/img/logo.webp" alt="Café do Padrinho, Authentic Brazilian Breakfast &amp; Lunch" width="512" height="512" decoding="async">
     <h1 id="hero-title">
       <span class="sr-only">Café do Padrinho: </span>
-      <span class="hero-title">Sabor de casa, no meio de Londres.</span>
+      <span class="hero-title" data-pt="Sabor de casa, no meio de Londres." data-en="A taste of home, in London.">Sabor de casa, no meio de Londres.</span>
     </h1>
     <p class="hero-desc hero-rest">Café, salgados e pratos brasileiros servidos com o jeito de casa. Café da manhã e almoço, de segunda a sábado, na Wandsworth Road.</p>
     <div class="hero-ctas hero-rest">
@@ -732,7 +749,7 @@ p{margin:0}
         <address class="address" id="addressText">472 Wandsworth Rd<br>Nine Elms<br>London SW8 3EB<br>United Kingdom</address>
         <button class="copy-btn" id="copyAddress" type="button">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-          <span>Copiar endereço</span>
+          <span id="copyLabel" data-noi18n>Copiar endereço</span>
         </button>
         <div class="contact-line">
           <span>Telefone</span>
@@ -850,18 +867,141 @@ const CONFIG = {
   timezone: "Europe/London",
   // Horários (formato 24h). null = fechado.
   hours: [
-    { day: "Segunda", key: "Mon", open: "08:00", close: "16:30" },
-    { day: "Terça",   key: "Tue", open: "08:00", close: "16:30" },
-    { day: "Quarta",  key: "Wed", open: "08:00", close: "16:30" },
-    { day: "Quinta",  key: "Thu", open: "08:00", close: "16:30" },
-    { day: "Sexta",   key: "Fri", open: "08:00", close: "16:30" },
-    { day: "Sábado",  key: "Sat", open: "09:00", close: "16:30" },
-    { day: "Domingo", key: "Sun", open: null,    close: null }
+    { day: "Segunda", dayEn: "Monday",    key: "Mon", open: "08:00", close: "16:30" },
+    { day: "Terça",   dayEn: "Tuesday",   key: "Tue", open: "08:00", close: "16:30" },
+    { day: "Quarta",  dayEn: "Wednesday", key: "Wed", open: "08:00", close: "16:30" },
+    { day: "Quinta",  dayEn: "Thursday",  key: "Thu", open: "08:00", close: "16:30" },
+    { day: "Sexta",   dayEn: "Friday",    key: "Fri", open: "08:00", close: "16:30" },
+    { day: "Sábado",  dayEn: "Saturday",  key: "Sat", open: "09:00", close: "16:30" },
+    { day: "Domingo", dayEn: "Sunday",    key: "Sun", open: null,    close: null }
   ]
 };
 
 (function(){
   const d = document, root = d.documentElement;
+
+  /* ================= IDIOMAS (PT / EN) =================
+     O português está escrito no próprio HTML.
+     EN_TEXT traduz cada texto/atributo pelo texto original em PT.
+     Para ajustar uma tradução, edite o lado direito aqui. */
+  const EN_TEXT = {
+ "Pular para o conteúdo": "Skip to content",
+ "Início": "Home",
+ "Sobre": "About",
+ "Galeria": "Gallery",
+ "Localização": "Location",
+ "Ver cardápio": "View menu",
+ "Café, salgados e pratos brasileiros servidos com o jeito de casa. Café da manhã e almoço, de segunda a sábado, na Wandsworth Road.": "Coffee, Brazilian savoury snacks and home-style dishes. Breakfast and lunch, Monday to Saturday, on Wandsworth Road.",
+ "Visite-nos": "Visit us",
+ "Sobre o Padrinho": "About Padrinho",
+ "Um pedacinho do Brasil em Londres.": "A little piece of Brazil in London.",
+ "Tem lugar que a gente reconhece antes mesmo de ler a placa. No Café do Padrinho, o café da manhã e o almoço têm sotaque brasileiro: salgado na vitrine, açaí na tigela, café na xícara e conversa no balcão.": "Some places you recognise before you even read the sign. At Café do Padrinho, breakfast and lunch come with a Brazilian accent: salgados in the display case, açaí in the bowl, coffee in the cup and conversation at the counter.",
+ "Para quem mora longe de casa, é um reencontro. Para quem ainda não conhece o Brasil, é um bom começo.": "If you live far from home, it feels like a reunion. If you have never been to Brazil, it is a great place to start.",
+ "Salgado quentinho e Guaraná, no Café do Padrinho.": "Warm salgados and Guaraná at Café do Padrinho.",
+ "O Brasil cabe numa xícara.": "Brazil fits in a cup.",
+ "Quatro coisas que você encontra por aqui, em qualquer dia da semana.": "Four things you will find here, any day of the week.",
+ "Café": "Coffee",
+ "Uma pausa sem pressa, do primeiro gole da manhã ao café da tarde.": "An unhurried break, from the first sip of the morning to the afternoon cup.",
+ "Brasil": "Brazil",
+ "Sabores que lembram casa, servidos do jeito que a gente conhece.": "Flavours that taste like home, served the way we know them.",
+ "Encontros": "Gatherings",
+ "Um balcão para conversar, um lugar para esperar o pedido e um motivo para voltar.": "A counter to chat at, a spot to wait for your order and a reason to come back.",
+ "Londres": "London",
+ "Na Wandsworth Road, no meio do dia a dia de uma das cidades mais vibrantes do mundo.": "On Wandsworth Road, in the everyday rhythm of one of the most vibrant cities in the world.",
+ "No balcão": "At the counter",
+ "Para qualquer hora do dia.": "For any time of day.",
+ "Do pão de queijo da manhã ao doce que acompanha o café da tarde.": "From morning pão de queijo to the sweet treat that goes with your afternoon coffee.",
+ "Pão de queijo, bauru e vários tipos de salgados.": "Pão de queijo, bauru and all kinds of Brazilian savoury snacks.",
+ "(abre o cardápio em nova aba)": "(opens the menu in a new tab)",
+ "Café da manhã": "Breakfast",
+ "Para começar o dia antes de encarar Londres.": "To start your day before taking on London.",
+ "Lanches": "Sandwiches",
+ "Feitos na hora, com salada, queijo e bacon.": "Made to order, with salad, cheese and bacon.",
+ "Açaí brasileiro na tigela, com fruta e granola.": "Brazilian açaí in a bowl, with fruit and granola.",
+ "Doces e café": "Sweets & coffee",
+ "Pastéis de nata, bolos e lattes cremosos.": "Pastéis de nata, cakes and creamy lattes.",
+ "Ver cardápio completo": "View full menu",
+ "Itens, preços e disponibilidade do dia estão sempre atualizados no cardápio oficial.": "Items, prices and daily availability are always up to date on the official menu.",
+ "Avaliações": "Reviews",
+ "Quem passa, volta.": "People stop by. Then they come back.",
+ "Ver avaliações no Google": "See reviews on Google",
+ "Avaliação no Google": "Google review, originally in Portuguese",
+ "Nosso cardápio": "Our menu",
+ "Sabores que trazem o Brasil para Londres.": "Flavours that bring Brazil to London.",
+ "Veja os pratos do dia, consulte preços e faça seu pedido direto pelo cardápio oficial do Café do Padrinho.": "See today's dishes, check prices and order directly from Café do Padrinho's official menu.",
+ "Fazer pedido": "Order now",
+ "Abre o sistema oficial de pedidos em uma nova aba.": "Opens the official ordering system in a new tab.",
+ "Direto da cozinha do Padrinho, em SW8.": "Straight from Padrinho's kitchen in SW8.",
+ "Da vitrine para a mesa.": "From the counter to your table.",
+ "Fotos do Café do Padrinho: o espaço, o café e o que sai da cozinha.": "Photos from Café do Padrinho: the space, the coffee and what comes out of the kitchen.",
+ "Siga o Café do Padrinho": "Follow Café do Padrinho",
+ "Prato do dia, novidades da vitrine e o que está saindo da cozinha aparecem primeiro por lá.": "Dish of the day, new additions to the counter and what's coming out of the kitchen are posted there first.",
+ "Ver no Instagram": "View on Instagram",
+ "Venha nos visitar.": "Come and visit us.",
+ "Telefone": "Phone",
+ "Abrir no Google Maps": "Open in Google Maps",
+ "Ligar": "Call",
+ "Horários": "Opening hours",
+ "Horário de Londres. Em feriados, confirme pelo Instagram ou por telefone.": "London time. On bank holidays, please check our Instagram or give us a call.",
+ "Horário de funcionamento do Café do Padrinho": "Café do Padrinho opening hours",
+ "Seu próximo café em Londres pode ter sabor de Brasil.": "Your next coffee in London could taste like Brazil.",
+ "Passe no balcão, peça pelo cardápio online ou ligue para a gente.": "Drop by the counter, order from the online menu or give us a call.",
+ "Como chegar": "Get directions",
+ "Authentic Brazilian breakfast & lunch em Nine Elms, Londres.": "Authentic Brazilian breakfast & lunch in Nine Elms, London.",
+ "Endereço": "Address",
+ "Contato": "Contact",
+ "Cardápio": "Menu",
+ "Café do Padrinho. Todos os direitos reservados.": "Café do Padrinho. All rights reserved.",
+ "Feito por Digital Beyond": "Made by Digital Beyond",
+ "Café do Padrinho, voltar ao início": "Café do Padrinho, back to top",
+ "Principal": "Main",
+ "Menu mobile": "Mobile menu",
+ "Balcão do Café do Padrinho em Londres, com vitrine de salgados, parede de plantas e revestimento de madeira": "The counter at Café do Padrinho in London, with a display of savoury snacks, a plant wall and wooden panelling",
+ "Rolar para a próxima seção": "Scroll to the next section",
+ "Porção de salgados fritos com salsinha em copo de papel, ao lado de uma lata de Guaraná Antarctica": "Fried Brazilian snacks with parsley in a paper cup, next to a can of Guaraná Antarctica",
+ "Salgado brasileiro cortado ao meio, com recheio aparente, servido no Café do Padrinho": "A Brazilian savoury snack cut in half showing its filling, served at Café do Padrinho",
+ "Porção de salgados fritos em copo de papel, ao lado de um suco verde com gelo e limão": "Fried Brazilian snacks in a paper cup, next to a green juice with ice and lime",
+ "Porção de salgados fritos com Guaraná Antarctica": "Fried Brazilian snacks with Guaraná Antarctica",
+ "Sanduíche com bacon e outro com presunto e queijo gratinado": "A bacon sandwich and another with ham and grilled cheese",
+ "Baguete recheada com frango empanado, bacon, tomate e folhas": "Baguette filled with breaded chicken, bacon, tomato and leaves",
+ "Dois copos de açaí com granola, banana e tangerina": "Two cups of açaí with granola, banana and tangerine",
+ "Pastéis de nata e bolos com frutas vermelhas e amêndoas": "Pastéis de nata and cakes with red berries and almonds",
+ "5 de 5 estrelas": "5 out of 5 stars",
+ "Vídeo com pratos servidos no Café do Padrinho": "Video of dishes served at Café do Padrinho",
+ "Interior do Café do Padrinho com balcão de madeira, vitrine aquecida e parede verde de plantas": "Inside Café do Padrinho, with a wooden counter, heated display and a green plant wall",
+ "Salgado cortado ao meio mostrando o recheio": "A savoury snack cut in half showing the filling",
+ "Travessa com pastéis de nata e fatias de bolo com frutas vermelhas e amêndoas": "A platter of pastéis de nata and slices of cake with red berries and almonds",
+ "Porção de bolinhos fritos com salsinha ao lado de uma lata de Guaraná Antarctica": "Fried snacks with parsley next to a can of Guaraná Antarctica",
+ "Sanduíche aberto com bacon e outro com presunto e queijo gratinado": "An open bacon sandwich and another with ham and grilled cheese",
+ "Salgados fritos em copo de papel ao lado de um suco verde com gelo e limão": "Fried snacks in a paper cup next to a green juice with ice and lime",
+ "Salgados fritos com Guaraná Antarctica (abre o Instagram em nova aba)": "Fried snacks with Guaraná Antarctica (opens Instagram in a new tab)",
+ "Açaí com granola, banana e tangerina (abre o Instagram em nova aba)": "Açaí with granola, banana and tangerine (opens Instagram in a new tab)",
+ "Baguete recheada com frango empanado e bacon (abre o Instagram em nova aba)": "Baguette with breaded chicken and bacon (opens Instagram in a new tab)",
+ "Salgado cortado ao meio mostrando o recheio (abre o Instagram em nova aba)": "Savoury snack cut in half showing the filling (opens Instagram in a new tab)",
+ "Pastéis de nata e bolos com frutas vermelhas (abre o Instagram em nova aba)": "Pastéis de nata and cakes with red berries (opens Instagram in a new tab)",
+ "Sanduíche com bacon e queijo gratinado (abre o Instagram em nova aba)": "Sandwich with bacon and grilled cheese (opens Instagram in a new tab)",
+ "Mapa com a localização do Café do Padrinho em Nine Elms, Londres": "Map showing Café do Padrinho in Nine Elms, London",
+ "Ligar para o Café do Padrinho": "Call Café do Padrinho"
+};
+  const UI = {
+    pt: { menuOpen: "Abrir menu", menuClose: "Fechar menu", play: "Reproduzir vídeo", pause: "Pausar vídeo", copy: "Copiar endereço", copied: "Endereço copiado", copyFail: "Selecione o endereço acima para copiar", closed: "Fechado", today: "hoje", openNow: "Aberto agora, até {t}", closedNow: "Fechado agora", opensToday: ", abre hoje às {t}", opensTomorrow: ", abre amanhã às {t}", opensOn: ", abre {d} às {t}" },
+    en: { menuOpen: "Open menu", menuClose: "Close menu", play: "Play video", pause: "Pause video", copy: "Copy address", copied: "Address copied", copyFail: "Select the address above to copy it", closed: "Closed", today: "today", openNow: "Open now, until {t}", closedNow: "Closed now", opensToday: ", opens today at {t}", opensTomorrow: ", opens tomorrow at {t}", opensOn: ", opens {d} at {t}" }
+  };
+  let LANG = "pt";
+  const t = k => UI[LANG][k];
+  // guarda o original em PT de cada texto/atributo traduzível
+  const textNodes = [], attrNodes = [];
+  const walker = d.createTreeWalker(d.body, NodeFilter.SHOW_TEXT);
+  let node;
+  while ((node = walker.nextNode())) {
+    const el = node.parentElement;
+    if (!el || el.closest("script,style,.hero-title,[data-noi18n],#hoursTable tbody,#openStatus")) continue;
+    const key = node.nodeValue.trim().replace(/\s+/g, " ");
+    if (EN_TEXT[key]) textNodes.push({ node, pt: node.nodeValue, en: node.nodeValue.replace(node.nodeValue.trim(), EN_TEXT[key]) });
+  }
+  d.querySelectorAll("[alt],[aria-label],[title]").forEach(el => ["alt", "aria-label", "title"].forEach(a => {
+    const v = el.getAttribute(a); if (v && EN_TEXT[v]) attrNodes.push({ el, a, pt: v, en: EN_TEXT[v] });
+  }));
 
   // Links centralizados
   d.querySelectorAll("[data-link]").forEach(a => {
@@ -873,7 +1013,7 @@ const CONFIG = {
   // Entrada do hero
   const heroEl = d.getElementById("inicio"), heroImg = heroEl.querySelector(".hero-media img"), titleEl = heroEl.querySelector(".hero-title");
   // divide o título em palavras mascaradas (funciona em qualquer quebra de linha)
-  titleEl.innerHTML = titleEl.textContent.trim().split(/\s+/).map((w, i) => `<span class="w"><span style="--i:${i}">${w}</span></span>`).join(" ");
+  const splitTitle = txt => { titleEl.innerHTML = txt.trim().split(/\s+/).map((w, i) => `<span class="w"><span style="--i:${i}">${w}</span></span>`).join(" "); };
   const imgReady = () => heroEl.classList.add("img-ready");
   if (heroImg.complete && heroImg.naturalWidth) imgReady();
   else { heroImg.addEventListener("load", imgReady, { once: true }); heroImg.addEventListener("error", imgReady, { once: true }); setTimeout(imgReady, 1500); }
@@ -903,7 +1043,7 @@ const CONFIG = {
   const setMenu = open => {
     d.body.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", open);
-    toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    toggle.setAttribute("aria-label", t(open ? "menuClose" : "menuOpen"));
     mnav.setAttribute("aria-hidden", !open);
     d.body.style.overflow = open ? "hidden" : "";
     if (open) header.classList.add("is-solid"); else onScroll();
@@ -932,33 +1072,36 @@ const CONFIG = {
     nowKey = get("weekday"); nowMin = (+get("hour")) * 60 + (+get("minute"));
   } catch (e) {}
   const toMin = s => { const [h, m] = s.split(":").map(Number); return h * 60 + m; };
-  CONFIG.hours.forEach(h => {
-    const tr = d.createElement("tr");
-    if (h.key === nowKey) tr.className = "today";
-    tr.innerHTML = `<th scope="row">${h.day}</th><td>${h.open ? `${h.open} – ${h.close}` : "Fechado"}</td>`;
-    tbody.appendChild(tr);
-  });
-  if (nowKey !== null) {
+  const dayName = h => LANG === "en" ? h.dayEn : h.day;
+  const renderHours = () => {
+    tbody.innerHTML = "";
+    CONFIG.hours.forEach(h => {
+      const tr = d.createElement("tr");
+      tr.innerHTML = `<th scope="row">${dayName(h)}</th><td>${h.open ? `${h.open} – ${h.close}` : t("closed")}</td>`;
+      if (h.key === nowKey) { tr.className = "today"; tr.querySelector("th").setAttribute("data-today", t("today")); }
+      tbody.appendChild(tr);
+    });
+    if (nowKey === null) return;
     const idx = CONFIG.hours.findIndex(h => h.key === nowKey), today = CONFIG.hours[idx];
     if (today && today.open && nowMin >= toMin(today.open) && nowMin < toMin(today.close)) {
-      status.textContent = `Aberto agora, até ${today.close}`; status.className = "status open";
+      status.textContent = t("openNow").replace("{t}", today.close); status.className = "status open";
     } else {
-      let msg = "Fechado agora";
-      if (today && today.open && nowMin < toMin(today.open)) msg += `, abre hoje às ${today.open}`;
-      else for (let i = 1; i <= 7; i++) { const n = CONFIG.hours[(idx + i) % 7]; if (n.open) { msg += `, abre ${i === 1 ? "amanhã" : n.day.toLowerCase()} às ${n.open}`; break; } }
+      let msg = t("closedNow");
+      if (today && today.open && nowMin < toMin(today.open)) msg += t("opensToday").replace("{t}", today.open);
+      else for (let i = 1; i <= 7; i++) { const n = CONFIG.hours[(idx + i) % 7]; if (n.open) { msg += (i === 1 ? t("opensTomorrow") : t("opensOn").replace("{d}", LANG === "en" ? n.dayEn : n.day.toLowerCase())).replace("{t}", n.open); break; } }
       status.textContent = msg; status.className = "status closed";
     }
-  }
-
+  };
 
   // Vídeo do cardápio: toca só quando visível; respeita movimento reduzido
+  let syncVideo = () => {};
   const vid = d.getElementById("menuVideo"), vbtn = d.getElementById("videoToggle");
   if (vid && vbtn) {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let userPaused = reduce, visible = false;
-    const sync = () => { const on = !vid.paused; vbtn.setAttribute("aria-pressed", on); vbtn.setAttribute("aria-label", on ? "Pausar vídeo" : "Reproduzir vídeo"); };
+    const sync = () => { const on = !vid.paused; vbtn.setAttribute("aria-pressed", on); vbtn.setAttribute("aria-label", t(on ? "pause" : "play")); };
     const tryPlay = () => { const pr = vid.play(); if (pr && pr.catch) pr.catch(sync); };
-    vid.addEventListener("play", sync); vid.addEventListener("pause", sync);
+    vid.addEventListener("play", sync); vid.addEventListener("pause", sync); syncVideo = sync;
     vbtn.addEventListener("click", () => { if (vid.paused) { userPaused = false; tryPlay(); } else { userPaused = true; vid.pause(); } });
     if ("IntersectionObserver" in window) {
       new IntersectionObserver(e => { visible = e[0].isIntersecting; if (visible && !userPaused) tryPlay(); else if (!visible) vid.pause(); }, { threshold: .35 }).observe(vid);
@@ -974,14 +1117,36 @@ const CONFIG = {
   // Copiar endereço
   const copyBtn = d.getElementById("copyAddress");
   copyBtn.addEventListener("click", async () => {
-    const label = copyBtn.querySelector("span");
+    const label = d.getElementById("copyLabel");
     try {
       if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(CONFIG.address);
       else { const t = d.createElement("textarea"); t.value = CONFIG.address; t.style.position = "fixed"; t.style.opacity = "0"; d.body.appendChild(t); t.select(); d.execCommand("copy"); t.remove(); }
-      label.textContent = "Endereço copiado";
-    } catch (e) { label.textContent = "Selecione o endereço acima para copiar"; }
-    setTimeout(() => label.textContent = "Copiar endereço", 2500);
+      label.textContent = t("copied");
+    } catch (e) { label.textContent = t("copyFail"); }
+    setTimeout(() => label.textContent = t("copy"), 2500);
   });
+
+  // ---- troca de idioma ----
+  const titleEl2 = d.querySelector(".hero-title");
+  const setLang = (lang, save) => {
+    LANG = lang === "en" ? "en" : "pt";
+    root.lang = LANG === "en" ? "en-GB" : "pt-BR";
+    textNodes.forEach(o => o.node.nodeValue = o[LANG]);
+    attrNodes.forEach(o => o.el.setAttribute(o.a, o[LANG]));
+    splitTitle(titleEl2.dataset[LANG]);
+    d.getElementById("copyLabel").textContent = t("copy");
+    toggle.setAttribute("aria-label", t(d.body.classList.contains("menu-open") ? "menuClose" : "menuOpen"));
+    syncVideo();
+    renderHours();
+    d.querySelectorAll(".lang-switch button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === LANG));
+    if (save) { try { localStorage.setItem("cdp-lang", LANG); } catch (e) {} }
+  };
+  d.querySelectorAll(".lang-switch button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang, true)));
+  // idioma inicial: ?lang=en na URL > escolha salva > idioma do navegador
+  let initial = new URLSearchParams(location.search).get("lang");
+  if (!initial) { try { initial = localStorage.getItem("cdp-lang"); } catch (e) {} }
+  if (!initial) initial = /^pt/i.test(navigator.language || "") ? "pt" : "en";
+  setLang(initial, false);
 })();
 </script>
 </body>
