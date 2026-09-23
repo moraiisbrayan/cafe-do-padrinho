@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Café do Padrinho | Brazilian Café in London</title>
+<meta name="description" content="Café do Padrinho is a Brazilian café in Nine Elms, London, serving authentic Brazilian breakfast and lunch. See the menu, order online and visit us at 472 Wandsworth Rd, SW8 3EB.">
+<meta name="theme-color" content="#1D130D">
+<!-- Troque pelo domínio final quando publicar -->
+<link rel="canonical" href="https://SEU-DOMINIO.com/">
+
+<!-- Open Graph / redes sociais (og:image precisa de URL absoluta após publicar) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Café do Padrinho">
+<meta property="og:title" content="Café do Padrinho | Brazilian Café in London">
+<meta property="og:description" content="Authentic Brazilian breakfast & lunch in Nine Elms, London. 472 Wandsworth Rd, SW8 3EB.">
+<meta property="og:url" content="https://SEU-DOMINIO.com/">
+<meta property="og:image" content="https://SEU-DOMINIO.com/assets/img/interior.webp">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/interior.webp" fetchpriority="high">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Café do Padrinho",
+  "description": "Authentic Brazilian breakfast & lunch in London.",
+  "servesCuisine": "Brazilian",
+  "telephone": "+447950938895",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "472 Wandsworth Rd",
+    "addressLocality": "London",
+    "addressRegion": "Nine Elms",
+    "postalCode": "SW8 3EB",
+    "addressCountry": "GB"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 51.4692797, "longitude": -0.1426335 },
+  "hasMenu": "https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&facebook=true",
+  "sameAs": ["https://www.instagram.com/cafedopadrinholondon/"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "16:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:30" }
+  ]
+}
+</script>
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --espresso:#1D130D;
+  --torra:#2C1C13;
+  --grao:#6B4A33;
+  --creme:#EFE4D0;
+  --papel:#F6EFE3;
+  --verde:#1A3124;
+  --verde-2:#22402F;
+  --ouro:#B8914A;
+  --ouro-claro:#CFAE6E;
+  --tinta:#241A14;
+  --tinta-suave:#5E4C40;
+  --linha:rgba(36,26,20,.13);
+  --linha-clara:rgba(239,228,208,.14);
+  --serif:"Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
+  --sans:"Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --wrap:1280px;
+  --pad:clamp(22px,5.5vw,64px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --header-h:84px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:1.0625rem;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+/* textura de papel sutil em toda a página */
+body::after{content:"";position:fixed;inset:0;z-index:300;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1;margin:0;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:400;background:var(--ouro);color:var(--espresso);padding:10px 16px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+:focus-visible{outline:1.5px solid var(--ouro);outline-offset:4px}
+
+/* tratamento de cor unificado nas fotos reais */
+.hero-media img,.about-figure img,.exp-photos img,.g img{filter:saturate(.9) contrast(1.05) sepia(.06)}
+
+/* ============ BOTÕES ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 30px;border-radius:2px;font:500 .9rem/1 var(--sans);letter-spacing:.06em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-primary{background:var(--ouro);color:var(--espresso)}
+.btn-primary:hover{background:var(--creme)}
+.btn-ghost{border-color:rgba(239,228,208,.4);color:var(--creme)}
+.btn-ghost:hover{border-color:var(--creme);background:rgba(239,228,208,.06)}
+.btn-dark{background:var(--espresso);color:var(--creme)}
+.btn-dark:hover{background:var(--torra)}
+.btn-line{border-color:rgba(36,26,20,.35);color:var(--tinta)}
+.btn-line:hover{border-color:var(--tinta);background:var(--tinta);color:var(--papel)}
+.btn-lg{min-height:62px;padding:0 40px}
+
+/* ============ HEADER ============ */
+.header{position:fixed;inset:0 0 auto 0;z-index:100;padding-top:env(safe-area-inset-top,0px);transition:background .5s var(--ease),border-color .5s var(--ease);border-bottom:1px solid transparent}
+.header.is-solid{background:rgba(29,19,13,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:var(--linha-clara)}
+.header-in{height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--creme);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.header:not(.is-solid) .brand{opacity:0;transform:translateY(-6px);pointer-events:none}
+.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(184,145,74,.5)}
+.brand span{font-family:var(--serif);font-weight:600;font-size:1.4rem;line-height:1;letter-spacing:.01em}
+.nav{display:flex;align-items:center;gap:40px}
+.nav ul{list-style:none;display:flex;gap:34px;margin:0;padding:0}
+.nav a:not(.btn){color:var(--creme);text-decoration:none;font-size:.88rem;font-weight:500;letter-spacing:.05em;opacity:.78;position:relative;padding:6px 0;transition:opacity .3s}
+.nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--ouro);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.nav a:not(.btn):hover{opacity:1}
+.nav a:not(.btn):hover::after{transform:scaleX(1)}
+.nav .btn{min-height:44px;padding:0 22px;font-size:.82rem}
+.menu-toggle{display:none;width:48px;height:48px;border:0;background:transparent;color:var(--creme);cursor:pointer;position:relative;z-index:120;margin-right:-10px}
+.menu-toggle span{position:absolute;left:12px;right:12px;height:1px;background:currentColor;transition:transform .4s var(--ease),opacity .2s}
+.menu-toggle span:nth-child(1){top:19px}
+.menu-toggle span:nth-child(2){top:24px;left:20px}
+.menu-toggle span:nth-child(3){top:29px}
+.menu-open .menu-toggle span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.menu-open .menu-toggle span:nth-child(2){opacity:0}
+.menu-open .menu-toggle span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+
+.mobile-nav{position:fixed;inset:0;z-index:110;background:var(--espresso);color:var(--creme);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--header-h) + env(safe-area-inset-top,0px)) var(--pad) calc(32px + env(safe-area-inset-bottom,0px));opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s}
+.menu-open .mobile-nav{opacity:1;visibility:visible}
+.menu-open .header{z-index:130}
+.mobile-nav ul{list-style:none;margin:0 0 40px;padding:0}
+.mobile-nav li{border-bottom:1px solid var(--linha-clara)}
+.mobile-nav li a{display:block;padding:12px 0;font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,10vw,2.9rem);text-decoration:none;line-height:1.1}
+.mobile-nav .btn{width:100%}
+.mobile-nav .mobile-meta{margin-top:28px;font-size:.88rem;letter-spacing:.03em;opacity:.6}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:var(--espresso);color:var(--creme);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,19,13,.62) 0%,rgba(29,19,13,.48) 22%,rgba(29,19,13,.82) 45%,rgba(29,19,13,.92) 70%,var(--espresso) 100%)}
+.hero-content{position:relative;padding-top:calc(var(--header-h) + 60px);padding-bottom:clamp(96px,13vh,140px)}
+.hero-logo{width:clamp(104px,13vw,168px);height:auto;margin-bottom:clamp(24px,3.5vw,38px);filter:drop-shadow(0 18px 40px rgba(0,0,0,.45))}
+.hero-title{display:block;font-size:clamp(3.3rem,10.5vw,8.2rem);line-height:.92;max-width:12ch;font-weight:500}
+@media (min-width:1024px){.hero-title{max-width:11ch;font-size:clamp(3.6rem,5.6vw,6rem)}.hero-logo{width:clamp(112px,9vw,140px)}.hero-content{padding-top:calc(var(--header-h) + 32px)}}
+@media (min-width:1024px) and (max-height:760px){.hero-logo{width:96px;margin-bottom:18px}.hero-title{font-size:clamp(3.2rem,5vw,4.8rem)}.hero-desc{margin-top:20px}.hero-ctas{margin-top:26px}.hero-address{margin-top:24px}}
+.hero-desc{margin-top:30px;max-width:44ch;font-size:clamp(1.02rem,1.3vw,1.14rem);color:rgba(239,228,208,.82);font-weight:400}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.hero-address{display:flex;align-items:center;gap:10px;margin-top:38px;font-size:.86rem;letter-spacing:.04em;color:rgba(239,228,208,.62);text-decoration:none;width:fit-content;transition:color .3s}
+.hero-address svg{width:15px;height:15px;color:var(--ouro);flex:none}
+.hero-address:hover{color:var(--creme)}
+.hero-coords{position:absolute;right:var(--pad);bottom:34px;font-size:.74rem;letter-spacing:.18em;color:rgba(239,228,208,.5);writing-mode:vertical-rl;transform:rotate(180deg);display:none}
+.scroll-cue{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:1px;height:64px;background:rgba(239,228,208,.18);overflow:hidden}
+.scroll-cue::before{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--ouro);animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{top:-40%}100%{top:100%}}
+
+/* ---- abertura do hero ----
+   1) a foto já aparece e "assenta" (zoom lento de 1.08 para 1)
+   2) a logo surge
+   3) o título sobe palavra por palavra, saindo de trás de uma máscara
+   4) texto, botões e endereço entram juntos, sem blur */
+.js .hero-media img{opacity:0;transform:scale(1.08);transition:opacity 1.1s ease,transform 2.8s cubic-bezier(.16,.7,.2,1)}
+.hero.img-ready .hero-media img{opacity:1;transform:none}
+.js .hero-logo{opacity:0;transform:translateY(10px) scale(.96);transition:opacity .9s var(--ease) .15s,transform 1.1s cubic-bezier(.16,.7,.2,1) .15s}
+.hero.go .hero-logo{opacity:1;transform:none}
+.hero-title .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.12em 0 .1em;margin:-.12em 0 -.1em}
+.js .hero-title .w>span{display:inline-block;transform:translateY(110%);transition:transform 1.1s cubic-bezier(.16,.8,.2,1);transition-delay:calc(.35s + var(--i) * 70ms)}
+.hero.go .hero-title .w>span{transform:none}
+.js .hero-rest{opacity:0;transform:translateY(12px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:.95s}
+.js .hero-ctas.hero-rest{transition-delay:1.05s}
+.js .hero-address.hero-rest{transition-delay:1.15s}
+.hero.go .hero-rest{opacity:1;transform:none}
+.js .scroll-cue{opacity:0;transition:opacity .8s ease 1.5s}
+.hero.go .scroll-cue{opacity:1}
+
+@media (min-width:1024px){
+  .hero-media{left:38%}
+  .hero-media img{object-position:30% 50%}
+  .hero-media::after{background:linear-gradient(90deg,var(--espresso) 0%,rgba(29,19,13,.72) 20%,rgba(29,19,13,.18) 58%,rgba(29,19,13,.3) 100%),linear-gradient(0deg,rgba(29,19,13,.65) 0%,transparent 40%)}
+  .hero{align-items:center}
+  .hero-content{padding-bottom:90px}
+  .hero-coords{display:block}
+}
+
+/* ============ SEÇÕES BASE ============ */
+.section{padding-block:clamp(96px,13vw,180px)}
+.kicker{display:flex;align-items:center;gap:14px;font-size:.84rem;font-weight:500;letter-spacing:.14em;color:var(--grao);margin-bottom:24px}
+.kicker::before{content:"";width:36px;height:1px;background:currentColor;opacity:.7}
+.h2{font-size:clamp(2.7rem,6.2vw,5.4rem)}
+.lead{font-size:clamp(1.05rem,1.4vw,1.16rem);color:var(--tinta-suave);max-width:48ch}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv-img{clip-path:inset(14% 0 0 0);transition:clip-path 1.3s var(--ease)}
+.rv-img.in{clip-path:inset(0 0 0 0)}
+
+/* ============ SOBRE ============ */
+.about{display:grid;gap:clamp(48px,7vw,110px);align-items:center}
+.about-text p+p{margin-top:20px}
+.about-text .h2{margin-bottom:34px;max-width:12ch}
+.about-text p{color:var(--tinta-suave);max-width:46ch}
+.about-figure{margin:0;position:relative}
+.about-figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 60%;border-radius:2px}
+.about-figure figcaption{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:1.08rem;color:var(--tinta-suave)}
+@media (min-width:900px){.about{grid-template-columns:1.05fr .95fr}.about-figure{margin-top:-60px}}
+
+/* ============ EXPERIÊNCIA ============ */
+.exp{background:var(--creme)}
+.exp-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:clamp(56px,8vw,110px)}
+.exp-head .h2{max-width:11ch}
+.exp-grid{display:grid;gap:clamp(48px,6vw,90px)}
+.pillars{list-style:none;margin:0;padding:0}
+.pillar{display:grid;grid-template-columns:1fr;gap:8px;padding:30px 0;border-top:1px solid var(--linha)}
+.pillar:last-child{border-bottom:1px solid var(--linha)}
+.pillar h3{font-size:clamp(2.3rem,4.4vw,3.5rem);color:var(--espresso)}
+.pillar p{color:var(--tinta-suave);max-width:40ch}
+.exp-photos{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.exp-photos img{width:100%;object-fit:cover;border-radius:2px}
+.exp-photos .p1{aspect-ratio:3/5}
+.exp-photos .p2{aspect-ratio:4/5;margin-top:28%}
+@media (min-width:900px){
+  .exp-grid{grid-template-columns:1.1fr .9fr}
+  .pillar{grid-template-columns:minmax(200px,.8fr) 1fr;align-items:baseline;gap:34px;padding:34px 0}
+  .pillar:nth-child(even) h3{padding-left:clamp(0px,3vw,52px)}
+}
+
+/* ============ DESTAQUES ============ */
+/* mobile: carrossel com arraste lateral */
+.hl-body{display:grid;gap:36px}
+.hl-intro .h2{max-width:11ch}
+.hl-intro .lead{margin-top:24px}
+.hl-list{list-style:none;margin:0 calc(var(--pad) * -1);padding:4px var(--pad) 12px;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--pad);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.hl-list::-webkit-scrollbar{display:none}
+.hl-item{flex:0 0 min(78%,340px);scroll-snap-align:start}
+.hl-item a{display:block;position:relative;text-decoration:none;color:var(--creme);border-radius:2px;overflow:hidden;aspect-ratio:4/5;background:var(--torra)}
+.hl-media{position:absolute;inset:0}
+.hl-media img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.05) sepia(.06);transition:transform 1.2s var(--ease)}
+.hl-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(29,19,13,.85) 100%)}
+.hl-text{position:absolute;left:0;right:0;bottom:0;padding:22px;display:flex;flex-direction:column;gap:6px}
+.hl-name{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1}
+.hl-desc{font-size:.92rem;line-height:1.45;color:rgba(239,228,208,.82)}
+.hl-foot{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.hl-note{font-size:.86rem;color:var(--tinta-suave);max-width:40ch}
+
+/* desktop: lista tipográfica à esquerda + foto grande que troca à direita */
+@media (min-width:900px){
+  .hl-body{--stage:clamp(340px,34vw,460px);--hl-gap:clamp(48px,7vw,120px);grid-template-columns:1fr var(--stage);grid-template-areas:"intro ." "list stage" "foot stage";column-gap:var(--hl-gap);row-gap:0;align-items:start}
+  .hl-body::after{content:"";grid-area:stage;grid-row:2/4;aspect-ratio:4/5}
+  .hl-intro{grid-area:intro;margin-bottom:clamp(36px,4vw,56px)}
+  .hl-list{grid-area:list;display:block;margin:0;padding:0;overflow:visible;border-top:1px solid var(--linha);position:relative}
+  .hl-item{border-bottom:1px solid var(--linha)}
+  .hl-item a{position:static;aspect-ratio:auto;background:none;color:var(--espresso);overflow:visible;display:block;padding:20px 0}
+  .hl-media{inset:auto;top:0;left:calc(100% + var(--hl-gap));width:var(--stage);aspect-ratio:4/5;overflow:hidden;border-radius:2px;opacity:0;transform:scale(1.03);transition:opacity .7s var(--ease),transform 1.2s var(--ease);pointer-events:none;box-shadow:0 30px 60px rgba(29,19,13,.18)}
+  .hl-media::after{display:none}
+  .hl-item.is-active .hl-media{opacity:1;transform:none}
+  .hl-text{position:static;padding:0;gap:0}
+  .hl-name{display:flex;align-items:center;gap:18px;font-size:clamp(2.2rem,3.6vw,3.3rem);color:rgba(36,26,20,.38);transition:color .5s var(--ease)}
+  .hl-name::after{content:"";height:1px;width:0;background:var(--ouro);transition:width .6s var(--ease)}
+  .hl-desc{color:var(--tinta-suave);font-size:.98rem;max-height:0;opacity:0;overflow:hidden;transition:max-height .6s var(--ease),opacity .5s var(--ease),margin .6s var(--ease)}
+  .hl-item.is-active .hl-name{color:var(--espresso)}
+  .hl-item.is-active .hl-name::after{width:56px}
+  .hl-item.is-active .hl-desc{max-height:4em;opacity:1;margin-top:10px}
+  .hl-foot{grid-area:foot;margin-top:clamp(32px,4vw,48px);flex-direction:row;align-items:center;flex-wrap:wrap;gap:20px 28px}
+}
+
+/* ============ AVALIAÇÕES ============ */
+.reviews{padding-top:0}
+.reviews-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(40px,5vw,64px)}
+.reviews-list{display:grid;gap:0}
+.review{margin:0;padding:34px 0;border-top:1px solid var(--linha);display:flex;flex-direction:column}
+.review:last-child{border-bottom:1px solid var(--linha)}
+.stars{display:flex;gap:3px;color:var(--ouro);margin-bottom:20px}
+.stars svg{width:15px;height:15px;fill:currentColor}
+.review blockquote{margin:0;flex:1}
+.review blockquote p{font-family:var(--serif);font-weight:500;font-size:clamp(1.3rem,1.9vw,1.55rem);line-height:1.38;color:var(--espresso)}
+.review blockquote p::before{content:"\201C"}
+.review blockquote p::after{content:"\201D"}
+.review figcaption{margin-top:26px;display:flex;flex-direction:column;gap:2px}
+.review-name{font-weight:600;font-size:.95rem;color:var(--tinta)}
+.review-src{font-size:.82rem;letter-spacing:.03em;color:var(--tinta-suave)}
+@media (min-width:900px){
+  .reviews-list{grid-template-columns:repeat(3,1fr);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+  .review,.review:last-child{border:0;padding:44px clamp(24px,3vw,44px)}
+  .review:first-child{padding-left:0}
+  .review:last-child{padding-right:0}
+  .review+.review{border-left:1px solid var(--linha)}
+}
+
+/* ============ CARDÁPIO ============ */
+.menu{background:var(--espresso);color:var(--creme);position:relative;overflow:hidden}
+.menu-in{display:grid;gap:48px;align-items:center;position:relative;z-index:1}
+.menu .kicker{color:var(--ouro-claro)}
+.menu .h2{max-width:13ch}
+.menu p{color:rgba(239,228,208,.74);max-width:42ch;margin-top:28px}
+.menu-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.menu-note{display:block;margin-top:16px;font-size:.82rem;color:rgba(239,228,208,.55)}
+.menu-mark{position:absolute;right:-3vw;bottom:-5vw;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(10rem,28vw,26rem);line-height:.8;color:rgba(239,228,208,.035);pointer-events:none;user-select:none;white-space:nowrap}
+.menu::before{content:"";position:absolute;inset:clamp(14px,2vw,26px);border:1px solid rgba(184,145,74,.22);pointer-events:none}
+.menu-video{margin:0;width:100%;max-width:420px;justify-self:center}
+.video-frame{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:2px;background:var(--torra);box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 0 1px rgba(184,145,74,.35)}
+.video-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.video-toggle{position:absolute;right:14px;bottom:14px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(239,228,208,.45);background:rgba(29,19,13,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:var(--creme);display:grid;place-items:center;cursor:pointer;transition:background .3s var(--ease)}
+.video-toggle:hover{background:rgba(29,19,13,.8)}
+.video-toggle svg{width:18px;height:18px}
+.video-toggle .i-pause{display:none}
+.video-toggle[aria-pressed="true"] .i-pause{display:block}
+.video-toggle[aria-pressed="true"] .i-play{display:none}
+.menu-video figcaption{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:1.08rem;color:rgba(239,228,208,.6);text-align:center}
+@media (min-width:900px){.menu-in{grid-template-columns:1.15fr .85fr;gap:clamp(48px,6vw,96px)}.menu-video{justify-self:end}}
+@media (max-width:420px){.menu-cta .btn{flex:1 1 100%}}
+
+/* ============ GALERIA ============ */
+.gallery-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:clamp(40px,5vw,68px)}
+.gallery-head p{color:var(--tinta-suave);max-width:34ch}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(100px,30vw,150px);gap:8px}
+.g{margin:0;overflow:hidden;border-radius:2px;background:var(--creme);grid-row:span 2}
+.g img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.g:hover img{transform:scale(1.04)}
+.g1,.g8{grid-column:1/-1}
+@media (min-width:768px){.gallery{grid-auto-rows:190px}}
+@media (min-width:1024px){
+  .gallery{grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(13,clamp(44px,5.4vw,80px));grid-auto-rows:auto;gap:18px}
+  .g{grid-row:auto}
+  .g1{grid-column:1/8;grid-row:1/5}
+  .g2{grid-column:8/13;grid-row:1/6}
+  .g3{grid-column:1/4;grid-row:5/10}
+  .g4{grid-column:4/8;grid-row:5/9}
+  .g5{grid-column:8/13;grid-row:6/10}
+  .g6{grid-column:1/5;grid-row:10/14}
+  .g7{grid-column:5/8;grid-row:9/14}
+  .g8{grid-column:8/13;grid-row:10/14}
+}
+
+/* ============ INSTAGRAM ============ */
+.insta{background:var(--verde);color:var(--creme)}
+.insta-in{display:grid;gap:56px;align-items:center}
+.insta-text{container-type:inline-size;min-width:0}
+.insta .kicker{color:var(--ouro-claro);font-family:var(--sans);font-size:.84rem;line-height:1.4;letter-spacing:.14em;font-weight:500}
+/* o @ nunca quebra: o tamanho acompanha a largura da coluna */
+.insta-handle{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(1.3rem,7.5vw,3.2rem);font-size:clamp(1.2rem,9.8cqi,3.2rem);line-height:1.1;white-space:nowrap;text-decoration:none;transition:color .3s}
+.insta-handle:hover{color:var(--ouro-claro)}
+.insta p{color:rgba(239,228,208,.74);max-width:40ch;margin:24px 0 36px}
+.insta-feed{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.insta-feed a{display:block;overflow:hidden;aspect-ratio:1/1;position:relative;background:var(--verde-2)}
+.insta-feed img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.05) sepia(.06);transition:transform 1s var(--ease)}
+.insta-ov{position:absolute;inset:0;display:grid;place-items:center;background:rgba(26,49,36,.55);color:var(--creme);opacity:0;transition:opacity .4s var(--ease)}
+.insta-ov svg{width:28px;height:28px}
+.insta-feed a:hover img{transform:scale(1.05)}
+.insta-feed a:hover .insta-ov,.insta-feed a:focus-visible .insta-ov{opacity:1}
+@media (min-width:900px){.insta-in{grid-template-columns:.95fr 1.05fr}}
+
+/* ============ LOCALIZAÇÃO + HORÁRIOS ============ */
+.visit-grid{display:grid;gap:clamp(44px,6vw,80px)}
+.visit-grid>*{min-width:0}
+.visit .h2{margin-bottom:34px}
+.address{font-style:normal;font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,2.5vw,1.85rem);line-height:1.35;color:var(--espresso)}
+.copy-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;min-height:44px;padding:0 16px;border:1px solid var(--linha);border-radius:2px;background:transparent;font:500 .84rem var(--sans);letter-spacing:.04em;color:var(--tinta);cursor:pointer;transition:border-color .3s}
+.copy-btn svg{width:15px;height:15px}
+.copy-btn:hover{border-color:var(--tinta)}
+.contact-line{margin-top:30px;display:flex;flex-direction:column;gap:4px}
+.contact-line a{font-family:var(--serif);font-weight:600;font-size:1.5rem;text-decoration:none;width:fit-content}
+.contact-line a:hover{color:var(--grao)}
+.contact-line span{font-size:.84rem;letter-spacing:.04em;color:var(--tinta-suave)}
+.visit-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.map-wrap{position:relative;border-radius:2px;overflow:hidden;background:var(--creme);aspect-ratio:4/3;width:100%;min-width:0}
+.map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.55) sepia(.3) contrast(.95)}
+.hours{margin-top:clamp(64px,8vw,110px);display:grid;gap:36px;padding-top:clamp(44px,5vw,70px);border-top:1px solid var(--linha)}
+.hours h3{font-size:clamp(2.2rem,4vw,3.2rem)}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-size:.94rem;font-weight:600}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--tinta-suave)}
+.status.open::before{background:#3E8A5B;box-shadow:0 0 0 4px rgba(62,138,91,.16)}
+.status.closed::before{background:#A5553A}
+.hours-note{margin-top:10px;font-size:.86rem;color:var(--tinta-suave)}
+.hours-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours-table th,.hours-table td{padding:14px 0;border-bottom:1px solid var(--linha);text-align:left;font-weight:500}
+.hours-table th{font-family:var(--serif);font-size:1.25rem}
+.hours-table td{text-align:right;color:var(--tinta-suave);letter-spacing:.03em}
+.hours-table tr.today th,.hours-table tr.today td{color:var(--espresso);font-weight:700}
+.hours-table tr.today th::after{content:"hoje";margin-left:10px;font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.06em;padding:3px 9px;border-radius:2px;background:var(--espresso);color:var(--ouro-claro);vertical-align:middle}
+@media (min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;align-items:start}.hours{grid-template-columns:.9fr 1.1fr}.map-wrap{aspect-ratio:auto;height:100%;min-height:480px}}
+
+/* ============ CTA FINAL ============ */
+.final{position:relative;color:var(--creme);background:radial-gradient(ellipse 70% 55% at 50% 30%,rgba(184,145,74,.13),transparent 70%),var(--espresso);overflow:hidden;isolation:isolate;text-align:center}
+/* três fotos reais como cópias impressas sobre o balcão */
+.final-stack{display:flex;justify-content:center;align-items:center;margin:0 auto clamp(48px,6vw,72px);height:clamp(150px,20vw,260px)}
+.print{display:block;flex:none;width:clamp(108px,15vw,210px);aspect-ratio:1/1;padding:clamp(6px,.7vw,10px);background:var(--creme);box-shadow:0 22px 44px rgba(0,0,0,.45);transition:transform .8s cubic-bezier(.16,.7,.2,1)}
+.print img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.05) sepia(.05)}
+.print.p1{transform:rotate(-7deg) translate(18%,6%)}
+.print.p2{transform:rotate(2deg) translateY(-4%);position:relative;z-index:1}
+.print.p3{transform:rotate(8deg) translate(-18%,8%)}
+.final-stack:hover .p1{transform:rotate(-10deg) translate(4%,6%)}
+.final-stack:hover .p3{transform:rotate(11deg) translate(-4%,8%)}
+.final-stack:hover .p2{transform:rotate(0) translateY(-8%)}
+.final .h2{max-width:15ch;margin-inline:auto;font-size:clamp(2.7rem,6.8vw,5.8rem)}
+.final p{margin:28px auto 0;max-width:40ch;color:rgba(239,228,208,.8)}
+.final-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:44px}
+.final-section{padding-block:clamp(96px,12vw,170px)}
+
+/* ============ FOOTER ============ */
+.footer{background:var(--espresso);color:rgba(239,228,208,.7);padding:clamp(64px,8vw,100px) 0 34px;font-size:.94rem}
+.footer-grid{display:grid;gap:44px;padding-bottom:52px;border-bottom:1px solid var(--linha-clara)}
+.footer .brand span{font-size:1.9rem}
+.footer .brand img{width:58px;height:58px}
+.footer-tag{margin-top:18px;max-width:30ch;font-family:var(--serif);font-style:italic;font-size:1.15rem;line-height:1.5}
+.footer h2{font-family:var(--sans);font-size:.8rem;font-weight:500;letter-spacing:.14em;color:var(--ouro-claro);margin-bottom:16px}
+.footer address{font-style:normal;line-height:1.75}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.footer a{text-decoration:none;transition:color .3s}
+.footer a:hover{color:var(--creme)}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:28px;font-size:.8rem;letter-spacing:.03em;color:rgba(239,228,208,.45)}
+@media (min-width:480px){.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
+.footer a{overflow-wrap:anywhere}
+@media (min-width:768px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}.footer-grid>div:first-child{grid-column:auto}}
+
+/* ============ CTA FIXO MOBILE ============ */
+.sticky-cta{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:90;display:flex;gap:8px;transform:translateY(140%);transition:transform .5s var(--ease)}
+.sticky-cta.show{transform:none}
+.sticky-cta .btn{flex:1;box-shadow:0 12px 32px rgba(29,19,13,.4)}
+.sticky-cta .btn-call{flex:none;width:54px;padding:0;background:var(--verde);color:var(--creme)}
+
+/* ============ RESPONSIVO ============ */
+@media (max-width:1023px){.nav{display:none}.menu-toggle{display:block}.footer{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}}
+@media (min-width:1024px){.sticky-cta,.mobile-nav{display:none}}
+@media (max-width:420px){
+  .hero-ctas .btn,.final-ctas .btn,.visit-ctas .btn{flex:1 1 100%}
+  .brand span{font-size:1.25rem}
+  .btn-lg{padding:0 28px;width:100%}
+  .insta-feed{gap:6px}
+}
+
+/* ============ MOVIMENTO REDUZIDO ============ */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .rv,.hero-rest,.hero-logo,.scroll-cue{opacity:1!important;transform:none!important}
+  .hero-title .w>span{transform:none!important}
+  .rv-img{clip-path:none!important}
+  .hero-media img{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="wrap header-in">
+    <a href="#inicio" class="brand" aria-label="Café do Padrinho, voltar ao início">
+      <img src="assets/img/logo-256.webp" alt="" width="46" height="46">
+      <span>Café do Padrinho</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+      </ul>
+      <a class="btn btn-primary" data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">Ver cardápio</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav aria-label="Menu mobile">
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#localizacao">Localização</a></li>
+    </ul>
+  </nav>
+  <a class="btn btn-primary btn-lg" data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">Ver cardápio</a>
+  <p class="mobile-meta">472 Wandsworth Rd, Nine Elms, London</p>
+</div>
+
+<main id="conteudo">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <div class="hero-media">
+    <img src="assets/img/interior.webp" alt="Balcão do Café do Padrinho em Londres, com vitrine de salgados, parede de plantas e revestimento de madeira" width="1000" height="850" fetchpriority="high" decoding="async">
+  </div>
+  <div class="wrap hero-content">
+    <img class="hero-logo" src="assets/img/logo.webp" alt="Café do Padrinho, Authentic Brazilian Breakfast &amp; Lunch" width="512" height="512" decoding="async">
+    <h1 id="hero-title">
+      <span class="sr-only">Café do Padrinho: </span>
+      <span class="hero-title">Sabor de casa, no meio de Londres.</span>
+    </h1>
+    <p class="hero-desc hero-rest">Café, salgados e pratos brasileiros servidos com o jeito de casa. Café da manhã e almoço, de segunda a sábado, na Wandsworth Road.</p>
+    <div class="hero-ctas hero-rest">
+      <a class="btn btn-primary" data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">Ver cardápio</a>
+      <a class="btn btn-ghost" href="#localizacao">Visite-nos</a>
+    </div>
+    <a class="hero-address hero-rest" data-link="maps" href="https://www.google.com/maps/place/Cafe+Do+Padrinho/@51.4693245,-0.2948653,12z/data=!4m10!1m2!2m1!1scafe+brasileiro+em+londres!3m6!1s0x487605738edd4d9b:0xc1105c0223a7388!8m2!3d51.4692797!4d-0.1426335!15sChpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc1ocIhpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc5IBC2NvZmZlZV9zaG9wmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxd1ZGSllUa1pQUkVVeFVUQlJNbHBFV25aUlYzUkNZMWRXY0dGSFl4QULgAQD6AQQIABAQ!16s%2Fg%2F11xvphp4qv?entry=ttu" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      472 Wandsworth Rd, Nine Elms, London
+    </a>
+  </div>
+  <span class="hero-coords" aria-hidden="true">51.4693° N  0.1426° W</span>
+  <a href="#sobre" class="scroll-cue" aria-label="Rolar para a próxima seção"></a>
+</section>
+
+<!-- ================= SOBRE ================= -->
+<section class="section" id="sobre" aria-labelledby="sobre-title">
+  <div class="wrap about">
+    <div class="about-text rv">
+      <span class="kicker">Sobre o Padrinho</span>
+      <h2 class="h2" id="sobre-title">Um pedacinho do Brasil em Londres.</h2>
+      <p>Tem lugar que a gente reconhece antes mesmo de ler a placa. No Café do Padrinho, o café da manhã e o almoço têm sotaque brasileiro: salgado na vitrine, açaí na tigela, café na xícara e conversa no balcão.</p>
+      <p>Para quem mora longe de casa, é um reencontro. Para quem ainda não conhece o Brasil, é um bom começo.</p>
+    </div>
+    <figure class="about-figure rv">
+      <img class="rv-img" src="assets/img/salgados-guarana.webp" alt="Porção de salgados fritos com salsinha em copo de papel, ao lado de uma lata de Guaraná Antarctica" width="730" height="835" loading="lazy" decoding="async">
+      <figcaption>Salgado quentinho e Guaraná, no Café do Padrinho.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= EXPERIÊNCIA ================= -->
+<section class="section exp" aria-labelledby="exp-title">
+  <div class="wrap">
+    <div class="exp-head rv">
+      <h2 class="h2" id="exp-title">O Brasil cabe numa xícara.</h2>
+      <p class="lead">Quatro coisas que você encontra por aqui, em qualquer dia da semana.</p>
+    </div>
+    <div class="exp-grid">
+      <ul class="pillars">
+        <li class="pillar rv"><h3>Café</h3><p>Uma pausa sem pressa, do primeiro gole da manhã ao café da tarde.</p></li>
+        <li class="pillar rv"><h3>Brasil</h3><p>Sabores que lembram casa, servidos do jeito que a gente conhece.</p></li>
+        <li class="pillar rv"><h3>Encontros</h3><p>Um balcão para conversar, um lugar para esperar o pedido e um motivo para voltar.</p></li>
+        <li class="pillar rv"><h3>Londres</h3><p>Na Wandsworth Road, no meio do dia a dia de uma das cidades mais vibrantes do mundo.</p></li>
+      </ul>
+      <div class="exp-photos">
+        <img class="p1 rv rv-img" src="assets/img/salgado.webp" alt="Salgado brasileiro cortado ao meio, com recheio aparente, servido no Café do Padrinho" width="421" height="754" loading="lazy" decoding="async">
+        <img class="p2 rv rv-img" src="assets/img/salgados-suco.webp" alt="Porção de salgados fritos em copo de papel, ao lado de um suco verde com gelo e limão" width="716" height="835" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DESTAQUES ================= -->
+<section class="section highlights" aria-labelledby="hl-title">
+  <div class="wrap hl-body">
+    <div class="hl-intro rv">
+      <span class="kicker">No balcão</span>
+      <h2 class="h2" id="hl-title">Para qualquer hora do dia.</h2>
+      <p class="lead">Do pão de queijo da manhã ao doce que acompanha o café da tarde.</p>
+    </div>
+    <ul class="hl-list" id="hlList">
+      <li class="hl-item is-active">
+        <a data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">
+          <span class="hl-media"><img src="assets/img/salgados-guarana.webp" alt="Porção de salgados fritos com Guaraná Antarctica" width="730" height="835" loading="lazy" decoding="async"></span>
+          <span class="hl-text">
+            <span class="hl-name">Salgados</span>
+            <span class="hl-desc">Pão de queijo, bauru e vários tipos de salgados.</span>
+          </span>
+          <span class="sr-only">(abre o cardápio em nova aba)</span>
+        </a>
+      </li>
+      <li class="hl-item">
+        <a data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">
+          <span class="hl-media"><img src="assets/img/sanduiche.webp" alt="Sanduíche com bacon e outro com presunto e queijo gratinado" width="716" height="835" loading="lazy" decoding="async"></span>
+          <span class="hl-text">
+            <span class="hl-name">Café da manhã</span>
+            <span class="hl-desc">Para começar o dia antes de encarar Londres.</span>
+          </span>
+          <span class="sr-only">(abre o cardápio em nova aba)</span>
+        </a>
+      </li>
+      <li class="hl-item">
+        <a data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">
+          <span class="hl-media"><img src="assets/img/baguete.webp" alt="Baguete recheada com frango empanado, bacon, tomate e folhas" width="713" height="835" loading="lazy" decoding="async"></span>
+          <span class="hl-text">
+            <span class="hl-name">Lanches</span>
+            <span class="hl-desc">Feitos na hora, com salada, queijo e bacon.</span>
+          </span>
+          <span class="sr-only">(abre o cardápio em nova aba)</span>
+        </a>
+      </li>
+      <li class="hl-item">
+        <a data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">
+          <span class="hl-media"><img src="assets/img/acai.webp" alt="Dois copos de açaí com granola, banana e tangerina" width="718" height="840" loading="lazy" decoding="async"></span>
+          <span class="hl-text">
+            <span class="hl-name">Açaí</span>
+            <span class="hl-desc">Açaí brasileiro na tigela, com fruta e granola.</span>
+          </span>
+          <span class="sr-only">(abre o cardápio em nova aba)</span>
+        </a>
+      </li>
+      <li class="hl-item">
+        <a data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">
+          <span class="hl-media"><img src="assets/img/doces.webp" alt="Pastéis de nata e bolos com frutas vermelhas e amêndoas" width="715" height="840" loading="lazy" decoding="async"></span>
+          <span class="hl-text">
+            <span class="hl-name">Doces e café</span>
+            <span class="hl-desc">Pastéis de nata, bolos e lattes cremosos.</span>
+          </span>
+          <span class="sr-only">(abre o cardápio em nova aba)</span>
+        </a>
+      </li>
+    </ul>
+    <div class="hl-foot rv">
+      <a class="btn btn-dark" data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">Ver cardápio completo</a>
+      <p class="hl-note">Itens, preços e disponibilidade do dia estão sempre atualizados no cardápio oficial.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AVALIAÇÕES (reais, Google) ================= -->
+<section class="section reviews" id="avaliacoes" aria-labelledby="rev-title">
+  <div class="wrap">
+    <div class="reviews-head rv">
+      <div>
+        <span class="kicker">Avaliações</span>
+        <h2 class="h2" id="rev-title">Quem passa, volta.</h2>
+      </div>
+      <a class="btn btn-line" data-link="maps" href="https://www.google.com/maps/place/Cafe+Do+Padrinho/@51.4693245,-0.2948653,12z/data=!4m10!1m2!2m1!1scafe+brasileiro+em+londres!3m6!1s0x487605738edd4d9b:0xc1105c0223a7388!8m2!3d51.4692797!4d-0.1426335!15sChpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc1ocIhpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc5IBC2NvZmZlZV9zaG9wmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxd1ZGSllUa1pQUkVVeFVUQlJNbHBFV25aUlYzUkNZMWRXY0dGSFl4QULgAQD6AQQIABAQ!16s%2Fg%2F11xvphp4qv?entry=ttu" target="_blank" rel="noopener">Ver avaliações no Google</a>
+    </div>
+    <div class="reviews-list">
+      <figure class="review rv">
+        <div class="stars" role="img" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></div>
+        <blockquote><p>Passo lá quase todo dia, top demais… sempre pego pão de queijo ou bauru, mas tem vários tipos de salgados e lanche que ele faz na hora com salada, queijo e bacon… recomendo… bom demais.</p></blockquote>
+        <figcaption><span class="review-name">Ricieri R.</span><span class="review-src">Avaliação no Google</span></figcaption>
+      </figure>
+      <figure class="review rv">
+        <div class="stars" role="img" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></div>
+        <blockquote><p>Excelentes no que fazem! Sempre que vou, o sorriso e a alegria deles são contagiantes. Recomendo demais o pão de queijo e também o almoço — realmente fazem tudo com muito prazer.</p></blockquote>
+        <figcaption><span class="review-name">Matheus G.</span><span class="review-src">Avaliação no Google</span></figcaption>
+      </figure>
+      <figure class="review rv">
+        <div class="stars" role="img" aria-label="5 de 5 estrelas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></div>
+        <blockquote><p>Que lugar adorável e acolhedor! Eles têm ótimas opções para viagem, como sanduíches frescos (inclusive vegetarianos), lattes cremosos, sucos naturais, pão de queijo e até açaí autêntico brasileiro. Tudo tem um sabor fresco e caseiro, definitivamente um lugar que vale a pena visitar!</p></blockquote>
+        <figcaption><span class="review-name">Amanda T.</span><span class="review-src">Avaliação no Google</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARDÁPIO ================= -->
+<section class="section menu" id="menu" aria-labelledby="menu-title">
+  <div class="wrap menu-in">
+    <div class="menu-copy rv">
+      <span class="kicker">Nosso cardápio</span>
+      <h2 class="h2" id="menu-title">Sabores que trazem o Brasil para Londres.</h2>
+      <p>Veja os pratos do dia, consulte preços e faça seu pedido direto pelo cardápio oficial do Café do Padrinho.</p>
+      <div class="menu-cta">
+        <a class="btn btn-primary btn-lg" data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">Ver cardápio</a>
+        <a class="btn btn-ghost btn-lg" data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">Fazer pedido</a>
+      </div>
+      <small class="menu-note">Abre o sistema oficial de pedidos em uma nova aba.</small>
+    </div>
+    <figure class="menu-video rv">
+      <div class="video-frame">
+        <video id="menuVideo" muted loop playsinline preload="none" poster="assets/video/poster.webp" width="600" height="800" aria-label="Vídeo com pratos servidos no Café do Padrinho">
+          <source src="assets/video/cafe-do-padrinho.mp4" type="video/mp4">
+        </video>
+        <button class="video-toggle" id="videoToggle" type="button" aria-label="Reproduzir vídeo" aria-pressed="false">
+          <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+          <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+        </button>
+      </div>
+      <figcaption>Direto da cozinha do Padrinho, em SW8.</figcaption>
+    </figure>
+  </div>
+  <span class="menu-mark" aria-hidden="true">Padrinho</span>
+</section>
+
+<!-- ================= GALERIA ================= -->
+<section class="section" id="galeria" aria-labelledby="gal-title">
+  <div class="wrap">
+    <div class="gallery-head rv">
+      <h2 class="h2" id="gal-title">Da vitrine para a mesa.</h2>
+      <p>Fotos do Café do Padrinho: o espaço, o café e o que sai da cozinha.</p>
+    </div>
+    <div class="gallery">
+      <figure class="g g1 rv"><img src="assets/img/interior.webp" alt="Interior do Café do Padrinho com balcão de madeira, vitrine aquecida e parede verde de plantas" width="1000" height="850" loading="lazy" decoding="async"></figure>
+      <figure class="g g2 rv"><img src="assets/img/acai.webp" alt="Dois copos de açaí com granola, banana e tangerina" width="718" height="840" loading="lazy" decoding="async"></figure>
+      <figure class="g g3 rv"><img src="assets/img/salgado.webp" alt="Salgado cortado ao meio mostrando o recheio" width="421" height="754" loading="lazy" decoding="async"></figure>
+      <figure class="g g4 rv"><img src="assets/img/doces.webp" alt="Travessa com pastéis de nata e fatias de bolo com frutas vermelhas e amêndoas" width="715" height="840" loading="lazy" decoding="async"></figure>
+      <figure class="g g5 rv"><img src="assets/img/salgados-guarana.webp" alt="Porção de bolinhos fritos com salsinha ao lado de uma lata de Guaraná Antarctica" width="730" height="835" loading="lazy" decoding="async"></figure>
+      <figure class="g g6 rv"><img src="assets/img/sanduiche.webp" alt="Sanduíche aberto com bacon e outro com presunto e queijo gratinado" width="716" height="835" loading="lazy" decoding="async"></figure>
+      <figure class="g g7 rv"><img src="assets/img/baguete.webp" alt="Baguete recheada com frango empanado, bacon, tomate e folhas" width="713" height="835" loading="lazy" decoding="async"></figure>
+      <figure class="g g8 rv"><img src="assets/img/salgados-suco.webp" alt="Salgados fritos em copo de papel ao lado de um suco verde com gelo e limão" width="716" height="835" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSTAGRAM ================= -->
+<section class="section insta" aria-labelledby="ig-title">
+  <div class="wrap insta-in">
+    <div class="insta-text rv">
+      <h2 class="kicker" id="ig-title">Siga o Café do Padrinho</h2>
+      <a class="insta-handle" data-link="instagram" href="https://www.instagram.com/cafedopadrinholondon/" target="_blank" rel="noopener">@cafedopadrinholondon</a>
+      <p>Prato do dia, novidades da vitrine e o que está saindo da cozinha aparecem primeiro por lá.</p>
+      <a class="btn btn-primary" data-link="instagram" href="https://www.instagram.com/cafedopadrinholondon/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Ver no Instagram
+      </a>
+    </div>
+    <div class="insta-feed rv">
+      <a data-link="instagram" href="https://www.instagram.com/cafedopadrinholondon/" target="_blank" rel="noopener" aria-label="Salgados fritos com Guaraná Antarctica (abre o Instagram em nova aba)"><img src="assets/img/salgados-guarana-sq.webp" alt="" width="560" height="560" loading="lazy" decoding="async"><span class="insta-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a data-link="instagram" href="https://www.instagram.com/cafedopadrinholondon/" target="_blank" rel="noopener" aria-label="Açaí com granola, banana e tangerina (abre o Instagram em nova aba)"><img src="assets/img/acai-sq.webp" alt="" width="560" height="560" loading="lazy" decoding="async"><span class="insta-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a data-link="instagram" href="https://www.instagram.com/cafedopadrinholondon/" target="_blank" rel="noopener" aria-label="Baguete recheada com frango empanado e bacon (abre o Instagram em nova aba)"><img src="assets/img/baguete-sq.webp" alt="" width="560" height="560" loading="lazy" decoding="async"><span class="insta-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a data-link="instagram" href="https://www.instagram.com/cafedopadrinholondon/" target="_blank" rel="noopener" aria-label="Salgado cortado ao meio mostrando o recheio (abre o Instagram em nova aba)"><img src="assets/img/salgado-sq.webp" alt="" width="560" height="560" loading="lazy" decoding="async"><span class="insta-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a data-link="instagram" href="https://www.instagram.com/cafedopadrinholondon/" target="_blank" rel="noopener" aria-label="Pastéis de nata e bolos com frutas vermelhas (abre o Instagram em nova aba)"><img src="assets/img/doces-sq.webp" alt="" width="560" height="560" loading="lazy" decoding="async"><span class="insta-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a data-link="instagram" href="https://www.instagram.com/cafedopadrinholondon/" target="_blank" rel="noopener" aria-label="Sanduíche com bacon e queijo gratinado (abre o Instagram em nova aba)"><img src="assets/img/sanduiche-sq.webp" alt="" width="560" height="560" loading="lazy" decoding="async"><span class="insta-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCALIZAÇÃO + HORÁRIOS ================= -->
+<section class="section visit" id="localizacao" aria-labelledby="loc-title">
+  <div class="wrap">
+    <div class="visit-grid">
+      <div class="rv">
+        <span class="kicker">Localização</span>
+        <h2 class="h2" id="loc-title">Venha nos visitar.</h2>
+        <address class="address" id="addressText">472 Wandsworth Rd<br>Nine Elms<br>London SW8 3EB<br>United Kingdom</address>
+        <button class="copy-btn" id="copyAddress" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span>Copiar endereço</span>
+        </button>
+        <div class="contact-line">
+          <span>Telefone</span>
+          <a data-link="tel" href="tel:+447950938895">+44 7950 938895</a>
+        </div>
+        <div class="visit-ctas">
+          <a class="btn btn-dark" data-link="maps" href="https://www.google.com/maps/place/Cafe+Do+Padrinho/@51.4693245,-0.2948653,12z/data=!4m10!1m2!2m1!1scafe+brasileiro+em+londres!3m6!1s0x487605738edd4d9b:0xc1105c0223a7388!8m2!3d51.4692797!4d-0.1426335!15sChpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc1ocIhpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc5IBC2NvZmZlZV9zaG9wmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxd1ZGSllUa1pQUkVVeFVUQlJNbHBFV25aUlYzUkNZMWRXY0dGSFl4QULgAQD6AQQIABAQ!16s%2Fg%2F11xvphp4qv?entry=ttu" target="_blank" rel="noopener">Abrir no Google Maps</a>
+          <a class="btn btn-line" data-link="tel" href="tel:+447950938895">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            Ligar
+          </a>
+        </div>
+      </div>
+      <div class="map-wrap rv">
+        <iframe title="Mapa com a localização do Café do Padrinho em Nine Elms, Londres" src="https://maps.google.com/maps?q=Cafe%20Do%20Padrinho%2C%20472%20Wandsworth%20Rd%2C%20London%20SW8%203EB&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="hours rv" aria-labelledby="hours-title">
+      <div>
+        <h3 id="hours-title">Horários</h3>
+        <p class="status" id="openStatus" aria-live="polite">Confira os horários</p>
+        <p class="hours-note">Horário de Londres. Em feriados, confirme pelo Instagram ou por telefone.</p>
+      </div>
+      <table class="hours-table" id="hoursTable">
+        <caption class="sr-only">Horário de funcionamento do Café do Padrinho</caption>
+        <tbody><!-- preenchido a partir do CONFIG.hours --></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA FINAL ================= -->
+<section class="final final-section" aria-labelledby="final-title">
+  <div class="final-stack rv" aria-hidden="true">
+    <span class="print p1"><img src="assets/img/doces-sq.webp" alt="" width="560" height="560" loading="lazy" decoding="async"></span>
+    <span class="print p2"><img src="assets/img/salgados-guarana-sq.webp" alt="" width="560" height="560" loading="lazy" decoding="async"></span>
+    <span class="print p3"><img src="assets/img/sanduiche-sq.webp" alt="" width="560" height="560" loading="lazy" decoding="async"></span>
+  </div>
+  <div class="wrap rv">
+    <h2 class="h2" id="final-title">Seu próximo café em Londres pode ter sabor de Brasil.</h2>
+    <p>Passe no balcão, peça pelo cardápio online ou ligue para a gente.</p>
+    <div class="final-ctas">
+      <a class="btn btn-primary btn-lg" data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">Ver cardápio</a>
+      <a class="btn btn-ghost btn-lg" data-link="maps" href="https://www.google.com/maps/place/Cafe+Do+Padrinho/@51.4693245,-0.2948653,12z/data=!4m10!1m2!2m1!1scafe+brasileiro+em+londres!3m6!1s0x487605738edd4d9b:0xc1105c0223a7388!8m2!3d51.4692797!4d-0.1426335!15sChpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc1ocIhpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc5IBC2NvZmZlZV9zaG9wmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxd1ZGSllUa1pQUkVVeFVUQlJNbHBFV25aUlYzUkNZMWRXY0dGSFl4QULgAQD6AQQIABAQ!16s%2Fg%2F11xvphp4qv?entry=ttu" target="_blank" rel="noopener">Como chegar</a>
+      <a class="btn btn-ghost btn-lg" data-link="tel" href="tel:+447950938895">Ligar</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="#inicio" class="brand" aria-label="Café do Padrinho, voltar ao início">
+          <img src="assets/img/logo-256.webp" alt="" width="58" height="58" loading="lazy">
+          <span>Café do Padrinho</span>
+        </a>
+        <p class="footer-tag">Authentic Brazilian breakfast &amp; lunch em Nine Elms, Londres.</p>
+      </div>
+      <div>
+        <h2>Endereço</h2>
+        <address>472 Wandsworth Rd<br>Nine Elms<br>London SW8 3EB<br>United Kingdom</address>
+      </div>
+      <div>
+        <h2>Contato</h2>
+        <ul>
+          <li><a data-link="tel" href="tel:+447950938895">+44 7950 938895</a></li>
+          <li><a data-link="instagram" href="https://www.instagram.com/cafedopadrinholondon/" target="_blank" rel="noopener">@cafedopadrinholondon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Links</h2>
+        <ul>
+          <li><a data-link="instagram" href="https://www.instagram.com/cafedopadrinholondon/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">Cardápio</a></li>
+          <li><a data-link="maps" href="https://www.google.com/maps/place/Cafe+Do+Padrinho/@51.4693245,-0.2948653,12z/data=!4m10!1m2!2m1!1scafe+brasileiro+em+londres!3m6!1s0x487605738edd4d9b:0xc1105c0223a7388!8m2!3d51.4692797!4d-0.1426335!15sChpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc1ocIhpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc5IBC2NvZmZlZV9zaG9wmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxd1ZGSllUa1pQUkVVeFVUQlJNbHBFV25aUlYzUkNZMWRXY0dGSFl4QULgAQD6AQQIABAQ!16s%2Fg%2F11xvphp4qv?entry=ttu" target="_blank" rel="noopener">Google Maps</a></li>
+          <li><a data-link="tel" href="tel:+447950938895">Telefone</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Café do Padrinho. Todos os direitos reservados.</span>
+      <span>Feito por Digital Beyond</span>
+    </div>
+  </div>
+</footer>
+
+<!-- CTA fixo no mobile -->
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn btn-primary" data-link="menu" href="https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&amp;restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&amp;facebook=true" target="_blank" rel="noopener">Ver cardápio</a>
+  <a class="btn btn-call" data-link="tel" href="tel:+447950938895" aria-label="Ligar para o Café do Padrinho">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+  </a>
+</div>
+
+<script>
+/* =====================================================
+   CONFIG — edite aqui endereço, links e horários.
+   Todos os links marcados com data-link são
+   atualizados automaticamente a partir deste objeto.
+   ===================================================== */
+const CONFIG = {
+  address: "472 Wandsworth Rd, Nine Elms, London SW8 3EB, United Kingdom",
+  phoneDisplay: "+44 7950 938895",
+  links: {
+    menu: "https://www.adminfoodbooking.com/ordering/restaurant/menu?company_uid=d0b53260-0f3d-4801-80d2-5d7f51654058&restaurant_uid=a96da4f7-c794-46bf-bc49-77080cafd1bd&facebook=true",
+    maps: "https://www.google.com/maps/place/Cafe+Do+Padrinho/@51.4693245,-0.2948653,12z/data=!4m10!1m2!2m1!1scafe+brasileiro+em+londres!3m6!1s0x487605738edd4d9b:0xc1105c0223a7388!8m2!3d51.4692797!4d-0.1426335!15sChpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc1ocIhpjYWZlIGJyYXNpbGVpcm8gZW0gbG9uZHJlc5IBC2NvZmZlZV9zaG9wmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxd1ZGSllUa1pQUkVVeFVUQlJNbHBFV25aUlYzUkNZMWRXY0dGSFl4QULgAQD6AQQIABAQ!16s%2Fg%2F11xvphp4qv?entry=ttu",
+    tel: "tel:+447950938895",
+    instagram: "https://www.instagram.com/cafedopadrinholondon/"
+  },
+  timezone: "Europe/London",
+  // Horários (formato 24h). null = fechado.
+  hours: [
+    { day: "Segunda", key: "Mon", open: "08:00", close: "16:30" },
+    { day: "Terça",   key: "Tue", open: "08:00", close: "16:30" },
+    { day: "Quarta",  key: "Wed", open: "08:00", close: "16:30" },
+    { day: "Quinta",  key: "Thu", open: "08:00", close: "16:30" },
+    { day: "Sexta",   key: "Fri", open: "08:00", close: "16:30" },
+    { day: "Sábado",  key: "Sat", open: "09:00", close: "16:30" },
+    { day: "Domingo", key: "Sun", open: null,    close: null }
+  ]
+};
+
+(function(){
+  const d = document, root = d.documentElement;
+
+  // Links centralizados
+  d.querySelectorAll("[data-link]").forEach(a => {
+    const url = CONFIG.links[a.dataset.link];
+    if (url) a.href = url;
+  });
+  const y = d.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
+
+  // Entrada do hero
+  const heroEl = d.getElementById("inicio"), heroImg = heroEl.querySelector(".hero-media img"), titleEl = heroEl.querySelector(".hero-title");
+  // divide o título em palavras mascaradas (funciona em qualquer quebra de linha)
+  titleEl.innerHTML = titleEl.textContent.trim().split(/\s+/).map((w, i) => `<span class="w"><span style="--i:${i}">${w}</span></span>`).join(" ");
+  const imgReady = () => heroEl.classList.add("img-ready");
+  if (heroImg.complete && heroImg.naturalWidth) imgReady();
+  else { heroImg.addEventListener("load", imgReady, { once: true }); heroImg.addEventListener("error", imgReady, { once: true }); setTimeout(imgReady, 1500); }
+  // espera a fonte do título (máx. 700ms) para o texto não "pular" durante a animação
+  let started = false;
+  const go = () => { if (started) return; started = true; requestAnimationFrame(() => requestAnimationFrame(() => heroEl.classList.add("go"))); };
+  if (d.fonts && d.fonts.load) Promise.race([d.fonts.load('500 1em "Cormorant Garamond"'), new Promise(r => setTimeout(r, 700))]).then(go, go);
+  else go();
+  setTimeout(go, 900);
+
+  // Header + CTA fixo
+  const header = d.getElementById("header"), sticky = d.getElementById("stickyCta"), hero = d.getElementById("inicio"), final = d.querySelector(".final");
+  let finalVisible = false;
+  const onScroll = () => {
+    const yPos = window.scrollY;
+    header.classList.toggle("is-solid", yPos > 40);
+    sticky.classList.toggle("show", yPos > hero.offsetHeight * .7 && !finalVisible);
+  };
+  if ("IntersectionObserver" in window && final) {
+    new IntersectionObserver(e => { finalVisible = e[0].isIntersecting; onScroll(); }, { threshold: .15 }).observe(final);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // Menu mobile
+  const toggle = d.getElementById("menuToggle"), mnav = d.getElementById("mobileNav");
+  const setMenu = open => {
+    d.body.classList.toggle("menu-open", open);
+    toggle.setAttribute("aria-expanded", open);
+    toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    mnav.setAttribute("aria-hidden", !open);
+    d.body.style.overflow = open ? "hidden" : "";
+    if (open) header.classList.add("is-solid"); else onScroll();
+    if (open) { const f = mnav.querySelector("a"); f && f.focus(); }
+  };
+  toggle.addEventListener("click", () => setMenu(!d.body.classList.contains("menu-open")));
+  mnav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+  d.addEventListener("keydown", e => { if (e.key === "Escape" && d.body.classList.contains("menu-open")) { setMenu(false); toggle.focus(); } });
+  window.addEventListener("resize", () => { if (window.innerWidth >= 1024 && d.body.classList.contains("menu-open")) setMenu(false); });
+
+  // Reveal ao entrar na tela
+  const rv = d.querySelectorAll(".rv");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    }), { rootMargin: "0px 0px -8% 0px", threshold: .08 });
+    rv.forEach(el => io.observe(el));
+  } else rv.forEach(el => el.classList.add("in"));
+
+  // Horários + status aberto/fechado (horário de Londres)
+  const tbody = d.querySelector("#hoursTable tbody"), status = d.getElementById("openStatus");
+  let nowKey = null, nowMin = null;
+  try {
+    const parts = new Intl.DateTimeFormat("en-GB", { timeZone: CONFIG.timezone, weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date());
+    const get = t => (parts.find(p => p.type === t) || {}).value;
+    nowKey = get("weekday"); nowMin = (+get("hour")) * 60 + (+get("minute"));
+  } catch (e) {}
+  const toMin = s => { const [h, m] = s.split(":").map(Number); return h * 60 + m; };
+  CONFIG.hours.forEach(h => {
+    const tr = d.createElement("tr");
+    if (h.key === nowKey) tr.className = "today";
+    tr.innerHTML = `<th scope="row">${h.day}</th><td>${h.open ? `${h.open} – ${h.close}` : "Fechado"}</td>`;
+    tbody.appendChild(tr);
+  });
+  if (nowKey !== null) {
+    const idx = CONFIG.hours.findIndex(h => h.key === nowKey), today = CONFIG.hours[idx];
+    if (today && today.open && nowMin >= toMin(today.open) && nowMin < toMin(today.close)) {
+      status.textContent = `Aberto agora, até ${today.close}`; status.className = "status open";
+    } else {
+      let msg = "Fechado agora";
+      if (today && today.open && nowMin < toMin(today.open)) msg += `, abre hoje às ${today.open}`;
+      else for (let i = 1; i <= 7; i++) { const n = CONFIG.hours[(idx + i) % 7]; if (n.open) { msg += `, abre ${i === 1 ? "amanhã" : n.day.toLowerCase()} às ${n.open}`; break; } }
+      status.textContent = msg; status.className = "status closed";
+    }
+  }
+
+
+  // Vídeo do cardápio: toca só quando visível; respeita movimento reduzido
+  const vid = d.getElementById("menuVideo"), vbtn = d.getElementById("videoToggle");
+  if (vid && vbtn) {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let userPaused = reduce, visible = false;
+    const sync = () => { const on = !vid.paused; vbtn.setAttribute("aria-pressed", on); vbtn.setAttribute("aria-label", on ? "Pausar vídeo" : "Reproduzir vídeo"); };
+    const tryPlay = () => { const pr = vid.play(); if (pr && pr.catch) pr.catch(sync); };
+    vid.addEventListener("play", sync); vid.addEventListener("pause", sync);
+    vbtn.addEventListener("click", () => { if (vid.paused) { userPaused = false; tryPlay(); } else { userPaused = true; vid.pause(); } });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(e => { visible = e[0].isIntersecting; if (visible && !userPaused) tryPlay(); else if (!visible) vid.pause(); }, { threshold: .35 }).observe(vid);
+    }
+  }
+
+
+  // Destaques: no desktop a foto grande acompanha o item em foco/hover
+  const hlItems = d.querySelectorAll("#hlList .hl-item");
+  const setActive = el => hlItems.forEach(i => i.classList.toggle("is-active", i === el));
+  hlItems.forEach(i => { i.addEventListener("mouseenter", () => setActive(i)); i.addEventListener("focusin", () => setActive(i)); });
+
+  // Copiar endereço
+  const copyBtn = d.getElementById("copyAddress");
+  copyBtn.addEventListener("click", async () => {
+    const label = copyBtn.querySelector("span");
+    try {
+      if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(CONFIG.address);
+      else { const t = d.createElement("textarea"); t.value = CONFIG.address; t.style.position = "fixed"; t.style.opacity = "0"; d.body.appendChild(t); t.select(); d.execCommand("copy"); t.remove(); }
+      label.textContent = "Endereço copiado";
+    } catch (e) { label.textContent = "Selecione o endereço acima para copiar"; }
+    setTimeout(() => label.textContent = "Copiar endereço", 2500);
+  });
+})();
+</script>
+</body>
+</html>
